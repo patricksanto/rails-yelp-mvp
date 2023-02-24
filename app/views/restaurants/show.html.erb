@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card shadow p-4 m-4">
+    <h1><%= @restaurant.name %></h1>
+    <h3 class="text-secondary mt-0"><%= @restaurant.category %></h3>
+    <p class="mt-4"><%= @restaurant.address %></p>
+    <p><%= @restaurant.phone_number %></p>
+
+    <%= link_to 'Review this Restaurant', new_restaurant_review_path(@restaurant) %>
+
+  </div>
+
+  <div class="card shadow p-4 m-4">
+  <% @restaurant.reviews.each do |x|%>
+    <p><%= x.content %></p>
+  <% end %>
+  </div>
+</div>
