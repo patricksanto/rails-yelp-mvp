@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <nav class="navbar bg-light bg-gradient shadow">
+      <div class="container">
+        <a class="navbar-brand">Restaurants</a>
+          <%= link_to 'New Restaurant', new_restaurant_path, class:'btn btn-outline-success' %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

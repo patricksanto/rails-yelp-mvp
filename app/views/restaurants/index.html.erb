@@ -1,12 +1,14 @@
-<div class="container">
+
+
+
   <div class="card p-4 m-4 shadow">
-
-    <h1>All restaurants</h1>
-
-    <% @restaurants.each do |restaurant| %>
-    <h3><%= link_to restaurant.name, restaurant_path(restaurant), class:'text-decoration-none'%></h3>
-    <% end %>
-
-    <%= link_to 'new Restaurant', new_restaurant_path , class:'btn btn-dark'%>
+    <div class="container text-center">
+      <div class="row">
+        <% @restaurants.each do |restaurant| %>
+          <div class="col-3">
+            <h3><%= link_to restaurant.name, restaurant_path(restaurant), class:'text-decoration-none '%></h3>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
