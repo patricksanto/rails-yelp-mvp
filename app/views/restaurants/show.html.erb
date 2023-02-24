@@ -5,13 +5,17 @@
     <p class="mt-4"><%= @restaurant.address %></p>
     <p><%= @restaurant.phone_number %></p>
 
-    <%= link_to 'Review this Restaurant', new_restaurant_review_path(@restaurant) %>
+    <%= link_to 'Review this Restaurant', new_restaurant_review_path(@restaurant), class: 'btn btn-dark my-2'%>
+    <%= link_to 'Go back', restaurants_path, class: 'btn btn-dark'%>
+
 
   </div>
 
   <div class="card shadow p-4 m-4">
+  <ul class="list-group">
   <% @restaurant.reviews.each do |x|%>
-    <p><%= x.content %></p>
+    <li class="list-group-item p-3"><strong>Rating <%= x.rating %></strong>  - <%= x.content %></li>
   <% end %>
+  </ul>
   </div>
 </div>
